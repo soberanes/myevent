@@ -1,0 +1,33 @@
+{
+  "name": "ebook-frontend-project",
+  "version": "0.0.1",
+  "description": "Ejemplo de desarrollo de aplicacion web con JavaScript",
+  "bugs": {
+    "url": "https://github.com/soberanes/myevent/issues",
+    "email": "cazaustre@gmail.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Paul Soberanes",
+    "email": "paulsoberanes@gmail.com",
+    "url": "http://develephant.mx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soberanes/myevent"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.8.8",
+    "gulp-connect": "~2.0.6",
+    "connect-history-api-fallback": "0.0.5",
+    "gulp-jshint": "~1.8.5",
+    "gulp-useref": "~1.0.2",
+    "gulp-if": "~1.2.5",
+    "gulp-uglify": "~1.0.1",
+    "gulp-minify-css": "~0.3.10",
+    "gulp-stylus": "~1.3.3",
+    "nib": "~1.0.4",
+    "jshint-stylish": "~1.0.0"
+  }
+}
