@@ -53,3 +53,22 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['server', 'watch']);
+
+var inject = require('gulp-inject');
+var wiredep = require('wiredep').stream;
+
+// Busca en las carpetas de estilos y javascript los archivos que hayamos creado
+// para inyectarlos en el index.html
+gulp.task('inject', function() {
+	var sources = gulp.src(['./app/scripts/**/*.js','./app/stylesheets/**/*.css']);
+	return gulp.src('index.html', {cwd: './app'}).pipe(inject(sources, {
+		read: false,
+		ignorePath: '/app'
+	})).pipe(gulp.dest('./app'));
+});
+// Inyecta las librerias que instalemos vía Bower
+gulp.task('wiredep', function () {
+	gulp.src('./app/index.html').pipe(wiredep({
+		directory: './app/lib'
+	})).pipe(gulp.dest('./app'));
+});
